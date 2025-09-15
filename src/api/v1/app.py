@@ -2,6 +2,8 @@ from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
 
+from . import v1_router
+
 
 @asynccontextmanager
 async def lifespan_event(app: FastAPI):
@@ -15,7 +17,5 @@ def create_app():
         swaggers_ui_parameters={"deepLinking": True},
         openapi_url="/openapi.json",
     )
+    app.include_router(v1_router)
     return app
-
-
-app = create_app()
