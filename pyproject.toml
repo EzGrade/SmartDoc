@@ -26,6 +26,10 @@ sqlalchemy = "^2.0.43"
 pydantic-settings = "^2.10.1"
 uvicorn = "^0.35.0"
 loguru = "^0.7.3"
+python-multipart = "^0.0.20"
+aiofiles = "^24.1.0"
+aioboto3 = "^15.1.0"
+mypy-boto3-cloudwatch = "^1.40.27"
 
 [tool.ruff]
 line-length = 88
